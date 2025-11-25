@@ -121,13 +121,6 @@ order_item
 
 cart_item
 
-Admin user from schema:
-
-email: admin@example.com
-password: admin123
-
-🔧 Configure Database Connection
-
 Open file:
 
 servlet-version/src/main/java/com/example/ecom/dao/DBUtil.java
@@ -136,10 +129,10 @@ servlet-version/src/main/java/com/example/ecom/dao/DBUtil.java
 Update:
 
 private static final String USER = "root";
-private static final String PASS = "your_mysql_password";
+private static final String PASS = "Harsh@6295";
 
 
-If your MySQL password is empty:
+If my MySQL password is empty:
 
 private static final String PASS = "";
 
