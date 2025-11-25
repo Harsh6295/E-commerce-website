@@ -62,9 +62,9 @@ Thymeleaf Templates
 H2/MySQL Database Support
 
 📦 Folder Structure
-(This section must stay at the bottom of the README — as clean, final project structure)
+```
 
-ecommerce-java-project/
+ecommerce-java-project
 │
 ├── servlet-version/                  # Main Java Servlet/JSP/JDBC implementation
 │   ├── pom.xml
@@ -99,7 +99,7 @@ ecommerce-java-project/
 │   └── ER_Diagram.png (optional)
 │
 └── README.md
-
+```
 Database Setup (MySQL)
 
 Open MySQL Workbench
