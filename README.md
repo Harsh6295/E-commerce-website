@@ -99,3 +99,84 @@ ecommerce-java-project/
 │   └── ER_Diagram.png (optional)
 │
 └── README.md
+
+Database Setup (MySQL)
+
+Open MySQL Workbench
+
+Open file:
+
+servlet-version/db/schema.sql
+
+
+Run the script to create:
+
+user_account
+
+product
+
+orders
+
+order_item
+
+cart_item
+
+Admin user from schema:
+
+email: admin@example.com
+password: admin123
+
+🔧 Configure Database Connection
+
+Open file:
+
+servlet-version/src/main/java/com/example/ecom/dao/DBUtil.java
+
+
+Update:
+
+private static final String USER = "root";
+private static final String PASS = "your_mysql_password";
+
+
+If your MySQL password is empty:
+
+private static final String PASS = "";
+
+▶️ How to Run the Servlet/JSP Version
+✔ 1. Open IntelliJ IDEA
+
+Click Open Project
+
+Select folder: servlet-version/
+
+Let Maven download dependencies
+
+✔ 2. Configure Tomcat
+
+Run → Edit Configurations
+
+Add Tomcat Server → Local
+
+Add Artifact: ecommerce-servlet:war exploded
+
+✔ 3. Build Project
+mvn clean package
+
+✔ 4. Start Tomcat
+
+Click Run ▶
+Then open:
+
+http://localhost:8080/ecommerce-servlet
+
+▶️ How to Run the Spring Boot Version (Optional)
+✔ Steps:
+cd springboot-version
+mvn spring-boot:run
+
+
+Then open:
+
+http://localhost:8080/
+
