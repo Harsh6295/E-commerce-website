@@ -60,7 +60,8 @@ Spring Data JPA (Hibernate)
 Thymeleaf Templates
 
 H2/MySQL Database Support
-Database Security & Data Integrity (Important Improvement)
+
+🔐 Database Security & Data Integrity (Important Improvement)
 
 All database operations use PreparedStatement to prevent SQL injection.
 
