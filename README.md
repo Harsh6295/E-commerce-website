@@ -60,13 +60,26 @@ Spring Data JPA (Hibernate)
 Thymeleaf Templates
 
 H2/MySQL Database Support
+Database Security & Data Integrity (Important Improvement)
+
+All database operations use PreparedStatement to prevent SQL injection.
+
+The checkout process uses JDBC transaction management:
+
+Order creation
+
+Order item insertion
+
+Inventory update
+
+These operations are executed as a single atomic transaction using commit() and rollback() to ensure data consistency and integrity.
 
 📦 Folder Structure
 ```
 
 ecommerce-java-project
 │
-├── servlet-version/                  # Main Java Servlet/JSP/JDBC implementation
+├── servlet-version/                  # Java Servlet/JSP/JDBC implementation
 │   ├── pom.xml
 │   ├── db/
 │   │   └── schema.sql                # Complete MySQL database schema
@@ -74,16 +87,16 @@ ecommerce-java-project
 │       ├── main/java/com/example/ecom/
 │       │   ├── model/                # Product, User, Cart, Order models
 │       │   ├── dao/                  # DBUtil + DAO classes
-│       │   └── servlet/              # All servlets (product, cart, admin CRUD)
+│       │   └── servlet/              # Servlets (product, cart, admin CRUD)
 │       └── main/webapp/
-│           ├── admin/                # Admin JSP pages (CRUD)
+│           ├── admin/                # Admin JSP pages
 │           ├── products.jsp
 │           ├── product.jsp
 │           ├── cart.jsp
 │           ├── checkout.jsp
 │           └── WEB-INF/web.xml
 │
-├── springboot-version/               # Optional modern Spring Boot version
+├── springboot-version/               # Spring Boot implementation
 │   ├── pom.xml
 │   └── src/
 │       ├── main/java/com/example/ecom/
@@ -91,14 +104,15 @@ ecommerce-java-project
 │       │   ├── model/
 │       │   └── repository/
 │       └── main/resources/
-│           ├── templates/            # Thymeleaf views
+│           ├── templates/
 │           └── application.properties
 │
 ├── docs/
-│   ├── Ecommerce_Project_Presentation.pptx   # Project PPT (for submission)
+│   ├── Ecommerce_Project_Presentation.pptx
 │   └── ER_Diagram.png (optional)
 │
 └── README.md
+
 ```
 Database Setup (MySQL)
 
